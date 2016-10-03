@@ -13,19 +13,20 @@
     <div>
       <header>
         <nav>
-          <div class="logo">
-            <div class="left_bracket2">&lt;</div>
-            <div class="question_mark2">&#63;</div>
-            <div class="right_bracket2">&gt;</div>
-          </div>
           <span class="nav_links_span">
             <% if logged_in? %>
-              <a class="nav_links" href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+              <p>
+                <%= link_to "#{current_user.username}" %>
+              </p>
+
               <a class="nav_links"href="/users/logout">Logout</a>
               <a class="nav_links" href="/questions/new">Ask a Question</a>
             <% else %>
               <a class="nav_links"href="/users/new">Register</a>
               <a class="nav_links"href="/users/login">Login</a>
+              <p>
+                <%= link_to
+              </p>
             <% end %>
             <a class="nav_links"href="/">Home</a>
             </span class="nav_links">
