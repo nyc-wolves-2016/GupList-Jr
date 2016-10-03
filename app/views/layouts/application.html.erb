@@ -16,18 +16,22 @@
           <span class="nav_links_span">
             <% if logged_in? %>
               <p>
-                <%= link_to "#{current_user.username}" %>
+                <%= link_to "#{current_user.username}", current_user %>
               </p>
 
-              <a class="nav_links"href="/users/logout">Logout</a>
-              <a class="nav_links" href="/questions/new">Ask a Question</a>
+              <p>
+                <%= link_to "Log out", logout_path, method: "delete" %>
+              </p>
+
             <% else %>
               <a class="nav_links"href="/users/new">Register</a>
               <p>
                 <%= link_to 'Login', login_path %>
               </p>
             <% end %>
-            <a class="nav_links"href="/">Home</a>
+            <p>
+              <%= link_to "Home", root_path %>
+            </p>
             </span class="nav_links">
         </nav>
       </header>
