@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   root 'categories#index'
 
-  get '/login' => 'login#new'
-  post '/login/new' => 'login#create'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 end
