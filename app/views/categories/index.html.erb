@@ -1,11 +1,10 @@
-<h1>Categories#index</h1>
+<h1>All Categories</h1>
 <p>Find me in app/views/categories/index.html.erb</p>
 
 <ul>
 
   <% @categories.each do |c| %>
-    <li><%= c.title %></li>
-    <li><%= link_to 'Show', category_path(c) %></li>
+    <li><%= link_to c.title, category_path(c) %></li>
 
   </ul>
 
