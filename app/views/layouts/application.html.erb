@@ -23,9 +23,8 @@
               <a class="nav_links" href="/questions/new">Ask a Question</a>
             <% else %>
               <a class="nav_links"href="/users/new">Register</a>
-              <a class="nav_links"href="/users/login">Login</a>
               <p>
-                <%= link_to
+                <%= link_to 'Login', login_path %>
               </p>
             <% end %>
             <a class="nav_links"href="/">Home</a>
