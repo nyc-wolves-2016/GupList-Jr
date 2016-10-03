@@ -1,2 +1,33 @@
 <h1>Categories#index</h1>
 <p>Find me in app/views/categories/index.html.erb</p>
+
+<ul>
+
+  <% @categories.each do |c| %>
+    <li><%= c.title %></li>
+    <li><%= link_to 'Show', category_path(c) %></li>
+
+  </ul>
+
+    <h1>Listing articles in <%= c.title %></h1>
+
+    <table>
+
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+      </tr>
+
+      <% c.articles.each do |article| %>
+
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.content %></td>
+          <td><%= link_to 'Show', article_path(article) %></td>
+        </tr>
+
+      <% end %>
+
+    </table>
+
+  <% end %>
