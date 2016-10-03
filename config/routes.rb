@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'users/new'
+
   get 'categories/index'
 
   get 'user/index'
@@ -10,6 +16,6 @@ Rails.application.routes.draw do
   get 'articles/index'
 
 
-
+  root 'category#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
